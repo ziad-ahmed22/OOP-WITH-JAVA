@@ -1,0 +1,254 @@
+======================================================================
+OOP WITH JAVA
+======================================================================
+
+OBject Oriented Programming
+    => OOP Is A Programming Paradigm Based On The Concept Of Objects
+
+Programming Paradigm
+    => Is A Style Of Programming Or A Way Of Thinking
+
+Objects
+    => Data = Attributes = Properites
+    => Operations = Methods = Functions
+    
+=> Class Is A Blueprint That Used To Create An Objects
+=> Object Is An Instance Of A Class
+
+======================================================================
+
+Access Modifiers
+    => Public & Private
+
+Public
+    => Can Be Accessed Inside And Outside The Class
+
+Private
+    => Can Be Accessed Only Inside The Class
+    => Cannot Be Accessed Outside Class
+
+======================================================================
+
+Encapsulation
+    => Setter & Getter
+    => Adding Data And Function Together In A Class 
+    => Hiding Data Of This Class From Other Classes To Prevent Any Classes From Direct Reaching To The Data
+
+Setter
+    => Methods That Setting The Values Of Attributes
+    => Can Do Any Validation To The Data
+
+Getter
+    => Methods That Get The Values Of The Attributes
+    
+* Data Hiding *
+    => An Object hides Its Private Fields From The Code Outside The Class
+    => Only Class Methods Can Access This Private Fields
+    => Accessing The Private Fields Outside The Class By A Public Methods Of The Class
+
+======================================================================
+
+Refrence Variable
+    => Rectangle rect = new Rectangle();
+    => Rectangle => Type => rect Type Of Rectangle
+    => new => Responsible For Store A Place In The Memory To The Object
+    => rect => Refrence Variable => Store The Address Of The Object In The Memory
+    
+======================================================================
+
+Constructor
+    => Constructors Are Automatically Called When Opject Is Created
+    => Constructors Used To Set The Initial Values To The Attributes
+    => Constructors Have The Name Class As Class
+    => Constructors Have No Return Type (Even void)
+    => Constructors Are Typically Public
+
+=> If You Don't Create A Constructor Java Creates A Default Constructor And Set Values To
+    => Numeric => 0
+    => Boolean => False
+    => Refrence Variabels => String, Obj, Arr => null
+
+======================================================================
+
+Polymorphism
+    => متعدد الأشكال
+    => Method Overloading & Method Overriding
+
+========================
+
+Overloading
+    => Two Or More Method Have A Same Name But Different In Signiture
+    => Signiture
+        => Number Of The Parameter
+        => Arrange Of The Parameter
+        => Data Type Of The Parameter
+
+Example:
+
+public int add(int num1, int num2) {
+    return num1 + num2;
+}
+public int add(int num1, int num2, int num3) {
+    return num1 + num2 + num3;
+}
+
+public double add(double num1, double num2, double num3) {
+    return num1 + num2 + num3;
+}
+
+public String add(String num1, String num2) {
+    return num1 + num2;
+}
+
+public double add(int num1, double num2) {
+    return num1 + num2;
+}
+public double add(double num1, int num2) {
+    return num1 + num2;
+}
+
+========================
+
+Overriding
+    => Two Methods In Parent And Child Classes
+    => With The Same Name And Signiture But Different In Body {}
+
+Example #1:
+
+public class Vehicle {
+    public void details() {"This Is A Vehicle"}
+}
+
+public class Vehicle {
+    public void details() {"This Is A Car"}
+}
+
+public class Bus {
+    public void details() {"This Is A Bus"}
+}
+
+Example #2:
+
+public class Employee {
+    public double getSalary() {return salary;}
+}
+
+public class SalriedEmployee {
+    public double getSalary() {return salary + bonus;}
+}
+
+public class HourlyEmployee {
+    public double getSalary() {return working_hours + hours_rate;}
+}
+
+======================================================================
+
+Static 
+    => Static Fields And Methods Don't Belong To An Instance Of A Class (obj)
+    => To Invoke Static Methods Use The Class Name
+    => double Val = Math.sqrt(25);
+    => They Are Used To Create A Utility Classes => خدمي
+    => Calc.concat("...", "...");
+    => Static Methods Only Communicate With Static Fields
+
+======================================================================
+
+Primative Values
+    => int, double, boolean
+
+Refrence Values
+    => String, Obj, Arr
+
+Circle c1 = new Circle();
+    => new => Making An Addres To The Object In Memory 
+    => c1 => Refrence Variable => Store The Address Of The Object In The Memory
+
+======================================================================
+
+Inheritance
+    => Parent Class => Super Class => Base Class
+    => Child Class => Sub Class => Derived Class
+    => Relation Between Super Class And Inherited Class Is Called "Is A" Relationship
+    => Employee Is A Person => public class Employee extends Person
+    => Car Is A Vehicle => public class Car extends Vehicle
+    
+* Constructors Are Not Inherited *
+* When A Sub Class Is Instantiated, The Super Class Constructor Executed First
+
+Final
+    => public final void details() {}
+    => Prevent Sub Classes From Overriding The Method
+
+======================================================================
+
+Public
+    => Puplic Fields And Methods Can Accessed Outside The Class
+
+Private
+    => Private Fields And Methods Can Accessed Only Inside The Class
+    => Sub Classes Cannot Accessed Private Fields And Methods
+
+Protected
+    => Protected Fields And Methods Cannot Accessed Outside The Class
+    => Protected Fields And Methods Can Accessed Inside The Class
+    => Sub Classes Can Accessed Private Fields And Methods
+    
+======================================================================
+
+Abstraction
+
+Abstract Classes
+    => public abstract class Employee
+    => Abstract Class Cannot Be Instantiated But Other Classes Are Derived From It
+    => An Abstract Class Service As A Super Class
+    => Its Represents As A Generic Form Or Template To All Sub Classes
+    => It Can Contain Abstract Methods And Other Normal Methods
+
+Abstract Methods
+    => public abstract void gitSalary();
+    => The Methods That Appear In A Super Class And Expected To Be Overridden In A Sub Class
+    => It Has No Body And Must Be Overridden In Sub Classes
+
+* Ny Class That Contains An Abstract Method Is Automatically Abstract *
+* Abstract Metho Used To Ensure That A Sub Class Implemments The Method *
+* If A Sub Class Fails To Oveerride An Abstract Method A Compiler Error Will Result *
+
+* Hiding Implementation And Show Only Functionality *
+
+======================================================================
+
+Interface
+    => public interface InterfaceName { Method Headers }
+    => Its Similler To An Abstract Class But Only Contain AN Abstract Methods
+    => Its Purpose Is To Specify Behavior For Other Classes
+    => A Class Can Implemment One Or More Interface
+    => public class CD implements InterfaceOne, InterfaceTwo
+
+* A Class Can Be Derived From Only One Super Class *
+* Java Allows A Class To Implement Multiple Interfaces *
+* If THe Class Implemments More Than One Interface You Must Implement All Methods In All Interfaces *
+
+Fields In Interface
+    => An Interface Can Contains Field Decleration
+    => All Fields In An Interface Are Treated As Final And Static
+    => You Must Provide An Initialization Value
+    => int field1 = 1; String field2 = "string";
+    => These Variabels Are Final Static Variabels
+    => Any Class That Implement Interface Has Access On These Fields
+    
+======================================================================
+
+Enumerated Types
+    => Syntax Or Definition => enum CarColor {Red, Green, Blue}
+    => Decleration ANd Assignment => CarColor c1 = CarColor.Red
+    => An enum Is A Specialized Class
+
+Enumerated Methods
+    => toString => Return The Name Of Calling Constant
+    => ordinal => Return Zero Based Position Of The Constant
+    => equals => Return True Or False
+    => compareTo => Return Negative Number Or Zero Or Positive Number
+    
+======================================================================
+======================================================================
+======================================================================
