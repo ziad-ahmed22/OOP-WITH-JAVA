@@ -18,15 +18,19 @@ Objects
 ======================================================================
 
 Access Modifiers
-    => Public & Private
 
 Public
-    => Can Be Accessed Inside And Outside The Class
+    => Puplic Fields And Methods Can Be Accessed Outside The Class
 
 Private
-    => Can Be Accessed Only Inside The Class
-    => Cannot Be Accessed Outside Class
+    => Private Fields And Methods Can Be Accessed Only Inside The Class
+    => Sub Classes Cannot Accessed Private Fields And Methods
 
+Protected
+    => Protected Fields And Methods Cannot Be Accessed Outside The Class
+    => Protected Fields And Methods Can Be Accessed Inside The Class
+    => Sub Classes Can Accessed Protected Fields And Methods
+    
 ======================================================================
 
 Encapsulation
@@ -59,11 +63,11 @@ Refrence Variable
 Constructor
     => Constructors Are Automatically Called When Opject Is Created
     => Constructors Used To Set The Initial Values To The Attributes
-    => Constructors Have The Name Class As Class
+    => Constructors Have The Same Name As Class
     => Constructors Have No Return Type (Even void)
     => Constructors Are Typically Public
 
-=> If You Don't Create A Constructor Java Creates A Default Constructor And Set Values To
+=> If You Don't Create A Constructor Java Creates A Default Constructor And Set Its Values To
     => Numeric => 0
     => Boolean => False
     => Refrence Variabels => String, Obj, Arr => null
@@ -181,20 +185,6 @@ Final
 
 ======================================================================
 
-Public
-    => Puplic Fields And Methods Can Accessed Outside The Class
-
-Private
-    => Private Fields And Methods Can Accessed Only Inside The Class
-    => Sub Classes Cannot Accessed Private Fields And Methods
-
-Protected
-    => Protected Fields And Methods Cannot Accessed Outside The Class
-    => Protected Fields And Methods Can Accessed Inside The Class
-    => Sub Classes Can Accessed Private Fields And Methods
-    
-======================================================================
-
 Abstraction
 
 Abstract Classes
@@ -205,12 +195,12 @@ Abstract Classes
     => It Can Contain Abstract Methods And Other Normal Methods
 
 Abstract Methods
-    => public abstract void gitSalary();
+    => public abstract void getSalary();
     => The Methods That Appear In A Super Class And Expected To Be Overridden In A Sub Class
     => It Has No Body And Must Be Overridden In Sub Classes
 
-* Ny Class That Contains An Abstract Method Is Automatically Abstract *
-* Abstract Metho Used To Ensure That A Sub Class Implemments The Method *
+* Any Class That Contains An Abstract Method Is Automatically Abstracted *
+* Abstract Method Used To Ensure That A Sub Class Implemments The Method *
 * If A Sub Class Fails To Oveerride An Abstract Method A Compiler Error Will Result *
 
 * Hiding Implementation And Show Only Functionality *
@@ -219,14 +209,14 @@ Abstract Methods
 
 Interface
     => public interface InterfaceName { Method Headers }
-    => Its Similler To An Abstract Class But Only Contain AN Abstract Methods
+    => Its Similler To An Abstract Class But Only Contains An Abstract Methods
     => Its Purpose Is To Specify Behavior For Other Classes
     => A Class Can Implemment One Or More Interface
     => public class CD implements InterfaceOne, InterfaceTwo
 
 * A Class Can Be Derived From Only One Super Class *
-* Java Allows A Class To Implement Multiple Interfaces *
-* If THe Class Implemments More Than One Interface You Must Implement All Methods In All Interfaces *
+* Java Allows The Class To Implement Multiple Interfaces *
+* If The Class Implemments More Than One Interface You Must Implement All Methods In All Interfaces *
 
 Fields In Interface
     => An Interface Can Contains Field Decleration

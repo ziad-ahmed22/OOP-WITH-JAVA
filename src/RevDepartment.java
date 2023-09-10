@@ -3,9 +3,13 @@ import java.util.ArrayList;
 public class RevDepartment {
     private int d_number;
     private String d_name;
-    ArrayList <RevEmployee> empArr;
+    private ArrayList <RevEmployee> empArr;
     
-    public RevDepartment() {}
+    public RevDepartment() {
+        d_number = 1;
+        d_name = "ASD";
+        empArr = new ArrayList<RevEmployee>();
+    }
     
     public RevDepartment(int d_number, String d_name) {
         this.d_number = d_number;
@@ -41,7 +45,7 @@ public class RevDepartment {
     
     public void printBasicData() {
         for (int i = 0; i < empArr.size(); i++) {
-            System.out.println("SSN => " + empArr.get(i).ssn + " || Name => " + empArr.get(i).name + " || Gender => " + empArr.get(i).gender);
+            System.out.println("SSN => " + empArr.get(i).getSSN() + " || Name => " + empArr.get(i).getName() + " || Gender => " + empArr.get(i).getGender());
         }
     }
     
